@@ -73,6 +73,6 @@
     "webpack-bundle-analyzer": "^2.8.2",
     "webpack-dev-server": "^2.5.0"
   },
-  "author": "@supermarinda",
+  "author": "@marinda-s",
   "license": "MIT"
 }
