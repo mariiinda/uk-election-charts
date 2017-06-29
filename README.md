@@ -10,7 +10,7 @@ Also, a demo to illustrate one of the methods of using [D3](https://github.com/d
 
 This repo illustrates the first method, the second method will be shown in a different demo repo coming soon.
 
-[View live site site](https://offbeat-feet.surge.sh/)
+[View live site](https://offbeat-feet.surge.sh/)
 
 ## Tasks / scripts
 
