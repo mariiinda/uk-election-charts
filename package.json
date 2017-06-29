@@ -8,6 +8,7 @@
     "build": "webpack -p --config webpack.prod.config.js",
     "lint": "eslint **/*.{js,jsx} --quiet",
     "generate-data": "csvtojson assets/data/uk-election-seats.csv > assets/data/uk-election-seats.json",
+    "deploy": "surge --domain offbeat-feet.surge.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
