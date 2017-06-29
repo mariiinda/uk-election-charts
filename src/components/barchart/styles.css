@@ -1,0 +1,36 @@
+:root {
+    --darkColor: #88777E;
+}
+
+.barChart {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.svg {
+    width: 100%;
+}
+
+.svg path {
+    shape-rendering: crispEdges;
+}
+
+
+/* todo: move this to css modules */
+
+:global {
+    .x-axis text {}
+    .x-axis path {
+        fill: color(var(--darkColor) a(20%));
+        stroke: none;
+    }
+    .x-axis .tick line {
+        stroke: var(--darkColor);
+        opacity: 0.3;
+        stroke-dasharray: 2, 2;
+    }
+    .x-axis text {
+        fill: var(--darkColor);
+        font-size: 0.9rem;
+    }
+}

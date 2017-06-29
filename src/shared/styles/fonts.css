@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'zilla_slabregular';
+    src: url('../../../assets/fonts/zillaslab-regular-webfont.woff2') format('woff2'), url('../../../assets/fonts/zillaslab-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.fontPrimary {
+    font-family: 'zilla_slabregular', 'Times New Roman', Times, serif;
+}
+
+.fontSecondary {
+    font-family: Arial, Helvetica, sans-serif;
+}

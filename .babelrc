@@ -1,0 +1,20 @@
+{
+  "presets": [
+    [
+      "es2015",
+      {
+        "modules": false
+      }
+    ],
+    "react"
+  ],
+  "plugins": [
+    "syntax-async-functions",
+    "syntax-dynamic-import",
+    "transform-async-to-generator",
+    "transform-regenerator",
+    "transform-runtime",
+    "transform-object-rest-spread",
+    "babel-plugin-array-includes"
+  ]
+}

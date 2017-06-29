@@ -1,0 +1,25 @@
+:root {
+    --highlight-color: #5649E2;
+}
+
+.footer {
+    display: flex;
+}
+
+.smallText {
+    font-size: 1.2rem;
+    margin: 5px 0 20px;
+}
+
+.smallTextLink {
+    border-bottom: 1px solid #DDD;
+    transition: all .25s ease-out;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.smallTextLink:hover,
+.smallTextLink:focus {
+    border-bottom: 1px solid currentColor;
+    color: var(--highlight-color);
+}

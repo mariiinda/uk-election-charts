@@ -1,0 +1,16 @@
+:root {
+    --color-text: #43000E;
+}
+
+.legend {
+    width: 15%;
+}
+
+.svg {
+    width: 100%;
+}
+
+:global .legendOrdinal {
+    font-size: 1.2rem;
+    fill: var(--color-text);
+}

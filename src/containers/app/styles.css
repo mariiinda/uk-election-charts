@@ -1,0 +1,60 @@
+:root {
+    --highlight-color: #5649E2;
+    --darkColor: #88777E;
+}
+
+.app {
+    padding: 10px;
+    height: 100%;
+}
+
+.controls {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.playButton {
+    font-size: 1.8rem;
+    padding: 10px 10px;
+    background: white;
+    border-radius: 5px;
+    margin-left: 10px;
+    min-width: 100px;
+    display: block;
+}
+
+.playButton:hover,
+.playButton:focus {
+    background: var(--darkColor);
+    color: white;
+    transition: background .25s ease-out;
+}
+
+.buttonContent {
+    display: flex;
+    align-items: center;
+}
+
+.playIcon {
+    fill: currentColor;
+    stroke: currentColor;
+    width: 16px;
+    height: 12px;
+    margin-left: 5px;
+}
+
+.pauseIcon {
+    fill: currentColor;
+    stroke: currentColor;
+    margin-left: 5px;
+    width: 12px;
+    height: 16px;
+}
+
+.treemapContainer {
+    display: flex;
+    align-items: space-between;
+    justify-content: space-between;
+}

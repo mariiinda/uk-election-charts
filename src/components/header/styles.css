@@ -1,0 +1,59 @@
+:root {
+    --highlight-color: #88777E;
+    --color-text: #43000E;
+}
+
+.dropdown {
+    display: flex;
+    align-items: center;
+    background: #FFF;
+    color: var(--color-text);
+    padding: 4px 10px;
+    height: 44px;
+    min-width: 185px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 2rem;
+}
+
+.label {
+    font-size: 1.4rem;
+    margin-right: 5px;
+}
+
+.select {
+    color: var(--color-text);
+    background: none;
+    font-size: 2rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: outline .25s ease-out;
+    border: 1px solid transparent;
+}
+
+.select:hover,
+.select:focus {
+    border: 1px solid var(--highlight-color);
+}
+
+.header {
+    width: 100%;
+}
+
+.title {
+    composes: fontPrimary from "../../shared/styles/fonts.css";
+    font-size: 4.8rem;
+    margin: 10px 0 8px;
+}
+
+.smallTitle {
+    font-size: 3.6rem;
+    display: block;
+}
+
+.intro {
+    margin: 16px 0 16px;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    max-width: 627px;
+}

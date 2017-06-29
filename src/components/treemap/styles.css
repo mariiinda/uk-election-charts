@@ -1,0 +1,75 @@
+.treemap {
+    width: 84%;
+    height: 50vh;
+    min-height: 215px;
+    position: relative;
+}
+
+.chart {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.node {
+    box-sizing: border-box;
+    position: absolute;
+    overflow: hidden;
+}
+
+.node {
+    box-sizing: border-box;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.node:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+    border: 6px solid rgba(255, 255, 255, 0.3)
+}
+
+.labels {
+    width: 100%;
+    height: 100%;
+}
+
+.labelsHidden {
+    display: none;
+}
+
+.nodeLabel {
+    padding: 6px;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nodeValue {
+    font-size: 1.4rem;
+    margin-top: 1px;
+    position: absolute;
+    top: 6px;
+    left: 10px;
+}
+
+:global .tooltip {
+    position: absolute;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.6);
+}
