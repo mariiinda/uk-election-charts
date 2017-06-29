@@ -23,7 +23,7 @@ function Footer() {
         {" "}
         <a
           className={styles.smallTextLink}
-          href="//marinda.me"
+          href="http://marinda.me"
           target="_blank"
           rel="noopener noreferrer"
         >
