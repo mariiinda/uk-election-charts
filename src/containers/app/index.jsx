@@ -1,24 +1,24 @@
-import React, { Component } from "react";
-import { arrayOf, func, string, shape } from "prop-types";
-import { connect } from "react-redux";
+import React, { Component } from 'react';
+import { arrayOf, func, string, shape } from 'prop-types';
+import { connect } from 'react-redux';
 
-import ukSeatData from "../../../assets/data/uk-election-seats.json";
-import Header from "../../components/header";
-import Footer from "../../components/footer";
-import Treemap from "../../components/treemap";
-import Dropdown from "../../components/dropdown";
-import { setYears } from "../../state/actions/years";
-import { setActiveYear } from "../../state/actions/activeYear";
-import { setUkSeats } from "../../state/actions/ukSeats";
+import ukSeatData from '../../../assets/data/uk-election-seats.json';
+import Header from '../../components/header';
+import Footer from '../../components/footer';
+import Treemap from '../../components/treemap';
+import Dropdown from '../../components/dropdown';
+import { setYears } from '../../state/actions/years';
+import { setActiveYear } from '../../state/actions/activeYear';
+import { setUkSeats } from '../../state/actions/ukSeats';
 import {
   colorList,
   colorLabelList,
   labelList
-} from "../../../assets/data/colorData";
-import BarChart from "../../components/barchart";
-import Legend from "../../components/legend";
+} from '../../../assets/data/colorData';
+import BarChart from '../../components/barchart';
+import Legend from '../../components/legend';
 
-import styles from "./styles.css";
+import styles from './styles.css';
 
 class App extends Component {
   constructor() {
@@ -123,7 +123,6 @@ class App extends Component {
                 </svg>
               </span>}
           </button>
-
         </div>
         <section className={styles.treemapContainer}>
           <Treemap

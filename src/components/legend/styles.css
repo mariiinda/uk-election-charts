@@ -3,7 +3,8 @@
 }
 
 .legend {
-    width: 15%;
+    height: 30px;
+    margin-top: 2px;
 }
 
 .svg {

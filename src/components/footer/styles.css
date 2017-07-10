@@ -1,18 +1,27 @@
 :root {
-    --highlight-color: #5649E2;
+    --highlight-color: #5649e2;
 }
 
 .footer {
     display: flex;
+    align-items: center;
+    height: 40px;
 }
 
 .smallText {
     font-size: 1.2rem;
-    margin: 5px 0 20px;
+    line-height: 1.5;
+    margin: 5px 4px 20px;
+    min-height: 20px;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.smallText:first-child {
+    border-right: none;
 }
 
 .smallTextLink {
-    border-bottom: 1px solid #DDD;
+    border-bottom: 1px solid #ddd;
     transition: all .25s ease-out;
     margin-right: 5px;
     display: inline-block;
@@ -22,4 +31,8 @@
 .smallTextLink:focus {
     border-bottom: 1px solid currentColor;
     color: var(--highlight-color);
+}
+
+.github {
+    height: 20px;
 }

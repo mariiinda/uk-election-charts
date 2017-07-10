@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import { scaleOrdinal as d3ScaleOrdinal } from "d3-scale";
-import { select as d3Select } from "d3-selection";
-import { arrayOf, string } from "prop-types";
-import { legendColor } from "d3-svg-legend";
+import React, { Component } from 'react';
+import { scaleOrdinal as d3ScaleOrdinal } from 'd3-scale';
+import { select as d3Select } from 'd3-selection';
+import { arrayOf, string } from 'prop-types';
+import { legendColor } from 'd3-svg-legend';
 
-import styles from "./styles.css";
+import styles from './styles.css';
 
 class Legend extends Component {
   componentDidUpdate() {
@@ -21,17 +21,17 @@ class Legend extends Component {
     const svg = d3Select(this.node);
 
     svg
-      .append("g")
-      .attr("class", "legendOrdinal")
-      .attr("transform", "translate(0,0)");
+      .append('g')
+      .attr('class', 'legendOrdinal')
+      .attr('transform', 'translate(0,0)');
 
     const legendOrdinal = legendColor()
-      .shapeWidth(5)
-      .shapePadding(2)
-      .labelOffset(4)
+      .shapeWidth('50')
+      .shapePadding(1)
+      .orient('horizontal')
       .scale(ordinal);
 
-    svg.select(".legendOrdinal").call(legendOrdinal);
+    svg.select('.legendOrdinal').call(legendOrdinal);
   }
 
   render() {

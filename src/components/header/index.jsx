@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import styles from "./styles.css";
+import styles from './styles.css';
 
 function Header() {
   return (
     <header className={styles.header}>
       <h1 className={styles.title}>
-        UK election seats
-        {" "}
+        UK election seats:
+        {' '}
         <span className={styles.smallTitle}>1918 - 2017</span>
       </h1>
       <p className={styles.intro}>
