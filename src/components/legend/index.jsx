@@ -26,7 +26,8 @@ class Legend extends Component {
       .attr('transform', 'translate(0,0)');
 
     const legendOrdinal = legendColor()
-      .shapeWidth('50')
+      .shapeWidth('54')
+      .shapeHeight('10')
       .shapePadding(1)
       .orient('horizontal')
       .scale(ordinal);
