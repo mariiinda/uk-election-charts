@@ -1,16 +1,16 @@
-import React, { Component } from "react";
-import { arrayOf, string, shape } from "prop-types";
-import { select as d3Select } from "d3-selection";
-import { transition as d3Transition } from "d3-transition";
-import { easeBackOut } from "d3-ease";
+import React, { Component } from 'react';
+import { arrayOf, string, shape } from 'prop-types';
+import { select as d3Select } from 'd3-selection';
+import { transition as d3Transition } from 'd3-transition';
+import { easeBackOut } from 'd3-ease';
 import {
   stratify as d3Stratify,
   treemap as d3Treemap,
   treemapResquarify as d3TreemapResquarify
-} from "d3-hierarchy";
-import { tooltip } from "../../utils/d3-tooltip";
+} from 'd3-hierarchy';
+import { tooltip } from '../../utils/d3-tooltip';
 
-import styles from "./styles.css";
+import styles from './styles.css';
 
 class Treemap extends Component {
   constructor() {
@@ -32,7 +32,7 @@ class Treemap extends Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener("resize", this.onResize);
+    window.removeEventListener('resize', this.onResize);
   }
 
   onResize() {
@@ -53,11 +53,11 @@ class Treemap extends Component {
     let activeData = ukSeats.map(item => {
       // since we have only one level of data we add parentNode properties to dataset
       const newItem = Object.assign({}, item);
-      newItem.parent = "root";
+      newItem.parent = 'root';
       return newItem;
     });
     // add parentnode needed for d3 hierachy layout
-    const parentNode = { party: "root", parent: "" };
+    const parentNode = { party: 'root', parent: '' };
     activeData = [parentNode, ...activeData];
     const { width, height } = this.getDimensions();
     // set up treemap
@@ -81,7 +81,7 @@ class Treemap extends Component {
   }
 
   bindEvents() {
-    window.addEventListener("resize", this.onResize);
+    window.addEventListener('resize', this.onResize);
   }
 
   create() {
@@ -93,9 +93,9 @@ class Treemap extends Component {
       .selectAll('[data-selector="node"]')
       .data(data)
       .enter()
-      .append("div")
-      .attr("data-selector", "node")
-      .attr("class", styles.node);
+      .append('div')
+      .attr('data-selector', 'node')
+      .attr('class', styles.node);
     // exit
     d3Select(this.chartElement)
       .selectAll('[data-selector="node"]')
@@ -106,30 +106,30 @@ class Treemap extends Component {
     this.updateSelection = d3Select(this.chartElement)
       .selectAll('[data-selector="node"]')
       .data(data)
-      .attr("title", d => d.party)
-      .style("left", d => `${d.x0}px`)
-      .style("top", d => `${d.y0}px`)
-      .style("width", 0)
-      .style("height", d => `${d.y1 - d.y0}px`)
-      .style("color", (d, i) => this.props.colorLabelList[i])
-      .style("background", (d, i) => this.props.colorList[i]);
+      .attr('title', d => d.party)
+      .style('left', d => `${d.x0}px`)
+      .style('top', d => `${d.y0}px`)
+      .style('width', 0)
+      .style('height', d => `${d.y1 - d.y0}px`)
+      .style('color', (d, i) => this.props.colorLabelList[i])
+      .style('background', (d, i) => this.props.colorList[i]);
     // add text
-    this.hideLabelAtValue = 30;
+    this.hideLabelAtValue = 45;
     this.updateSelection
-      .append("div")
-      .attr("data-selector", "labels")
+      .append('div')
+      .attr('data-selector', 'labels')
       .attr(
-        "class",
+        'class',
         d =>
           Number(d.data.seats) > this.hideLabelAtValue
             ? styles.labels
             : styles.labelsHidden
       )
-      .append("div")
-      .attr("class", styles.nodeLabel)
+      .append('div')
+      .attr('class', styles.nodeLabel)
       .text((d, i) => this.props.labelList[i])
-      .append("div")
-      .attr("class", styles.nodeValue)
+      .append('div')
+      .attr('class', styles.nodeValue)
       .text(d => d.data.seats);
     // transition
     this.updateSelection
@@ -137,7 +137,7 @@ class Treemap extends Component {
       .duration(500)
       .ease(easeBackOut)
       .delay((d, i) => i * 100)
-      .style("width", d => `${d.x1 - d.x0}px`);
+      .style('width', d => `${d.x1 - d.x0}px`);
     this.updateSelection.call(
       tooltip(
         d => d.data.itemLabel,
@@ -159,31 +159,31 @@ class Treemap extends Component {
     updateSelection.selectAll('[data-selector="labels"]').remove();
     // add labels
     updateSelection
-      .append("div")
-      .attr("data-selector", "labels")
+      .append('div')
+      .attr('data-selector', 'labels')
       .attr(
-        "class",
+        'class',
         d =>
           Number(d.data.seats) > this.hideLabelAtValue
             ? styles.labels
             : styles.labelsHidden
       )
-      .append("div")
-      .attr("class", styles.nodeLabel)
+      .append('div')
+      .attr('class', styles.nodeLabel)
       .text((d, i) => this.props.labelList[i])
-      .append("div")
-      .attr("class", styles.nodeValue)
+      .append('div')
+      .attr('class', styles.nodeValue)
       .text(d => d.data.seats);
     // transition
     updateSelection
       .transition()
       .duration(500)
       .ease(easeBackOut)
-      .attr("title", d => d.party)
-      .style("left", d => `${d.x0}px`)
-      .style("top", d => `${d.y0}px`)
-      .style("width", d => `${d.x1 - d.x0}px`)
-      .style("height", d => `${d.y1 - d.y0}px`);
+      .attr('title', d => d.party)
+      .style('left', d => `${d.x0}px`)
+      .style('top', d => `${d.y0}px`)
+      .style('width', d => `${d.x1 - d.x0}px`)
+      .style('height', d => `${d.y1 - d.y0}px`);
   }
 
   render() {
