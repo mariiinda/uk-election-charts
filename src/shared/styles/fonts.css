@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'raleway';
-    src: url('../../../assets/fonts/raleway-regular-webfont.woff2') format('woff2'), url('../../../assets/fonts/raleway-regular-webfont.woff') format('woff');
+    font-family: 'patua_oneregular';
+    src: url('../../../assets/fonts/patuaone-regular-webfont.woff2') format('woff2'), url('../../../assets/fonts/patuaone-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -10,5 +10,5 @@
 }
 
 .fontSecondary {
-    font-family: 'raleway', Arial, Helvetica, sans-serif;
+    font-family: 'patua_oneregular', Georgia, serif;
 }

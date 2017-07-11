@@ -1,6 +1,6 @@
 :root {
     --highlight-color: #5649E2;
-    --darkColor: #88777E;
+    --darkColor: #333;
 }
 
 .app {
@@ -64,5 +64,3 @@
     width: 22px;
     height: 16px;
 }
-
-.treemapContainer {}
